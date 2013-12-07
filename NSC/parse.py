@@ -12,7 +12,7 @@ for f in files:
     if not result: continue
     dollar = re.sub(",","", result.group(6))
     college_pos = result.group(3).find("大學")
-    if college_pos:
+    if college_pos > 1:
       college = result.group(3)[:college_pos] + "大學"
     else :
       collage = result.group(3)
