@@ -16,6 +16,7 @@ for f in files:
       college = result.group(3)[:college_pos] + "大學"
     else :
       collage = result.group(3)
-    print('"%s","%s","%s","%s","%s","%s","%s"'%(result.group(1),result.group(2),college,result.group(3),result.group(4),result.group(5),dollar)) #result.group(6)))
+    authoridx = result.group(2) + "-" + college
+    print('"%s","%s","%s","%s","%s","%s","%s","%s"'%(result.group(1),authoridx,result.group(2),college,result.group(3),result.group(4),result.group(5),dollar)) #result.group(6)))
     count+=1
   if count!=200: print("<WARN> %s 有問題"%f)
